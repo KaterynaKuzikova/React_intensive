@@ -1,0 +1,22 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #dae99e;
+    border-radius: 4px;
+    width: 80%;
+    margin-bottom: 10px;
+    align-items: center;
+    font-weight: 600;
+    color: black;
+    padding: 10px;
+  }
+  
+  .errorBorder {
+    background-color: rgb(221, 101, 121);
+  }
+  
+  .error {
+    color: red;
+    font-size: 10px;
+    margin-bottom: 10px;
+  }
