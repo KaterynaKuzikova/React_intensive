@@ -21,7 +21,7 @@ export const initialData = {
     {
       id: 2,
       name: 'surname',
-      header: 'Sureame',
+      header: 'Surname',
       className: 'surname',
       type: 'text',
       placeholder: 'Enter your Surname'

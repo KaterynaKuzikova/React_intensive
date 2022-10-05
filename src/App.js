@@ -1,5 +1,5 @@
 import styles from './App.css';
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import Header from './Components/Header/Header';
 import Info from './Components/Information/Information';
 import FilledProfile from './Components/FilledProfile/FilledProfile';
