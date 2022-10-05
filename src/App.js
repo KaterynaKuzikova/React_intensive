@@ -4,23 +4,20 @@ import Header from './Components/Header/Header';
 import Info from './Components/Information/Information';
 import FilledProfile from './Components/FilledProfile/FilledProfile';
 
-class App extends Component {
-  state = {
-    filled: false,
-    data: {}
-  };
-  handleSubmit = (data) => {
-    this.setState((prevState) => ({ ...prevState, filled: true, data: data }));
+export default function App() {
+  const [filled, setFilled] = useState(false);
+  const [data, setData] = useState(null);
+
+  const handleSubmit = (data) => {
+    setData(data);
+    setFilled(true);
   };
 
-  render() {
-    return (
-      <div className={styles.main}>
-        {!this.state.filled && <Header text='Creating of anketa' />}
-        {!this.state.filled && <Info onSubmit={this.handleSubmit} />}
-        {this.state.filled && <FilledProfile data={this.state.data} />}
-      </div>
-    );
-  }
+  return (
+    <div className={styles.main}>
+      {!filled && <Header text='Creating a profile' />}
+      {!filled && <Info onSubmit={handleSubmit} />}
+      {filled && <FilledProfile data={data} />}
+    </div>
+  );
 }
-export default App;

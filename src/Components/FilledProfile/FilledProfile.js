@@ -2,10 +2,9 @@ import React, { Component } from 'react';
 import Header from '../Header/Header';
 import styles from './FilledProfile.module.css';
 
-class FilledProfile extends Component {
-  render() {
+export default function FilledProfile (...props){
     const { name, surname, date, phone, site, about, stack, project } =
-      this.props.data;
+      props.data;
     return (
       <div className={styles.main}>
         <Header text={name + ' ' + surname} />
@@ -39,6 +38,4 @@ class FilledProfile extends Component {
       </div>
     );
   }
-}
 
-export default FilledProfile;
