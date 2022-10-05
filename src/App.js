@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import styles from './App.css';
+import React, { Component } from 'react';
+import Header from './Components/Header/Header';
+import Info from './Components/Information/Information';
+import FilledProfile from './Components/FilledProfile/FilledProfile';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state = {
+    filled: false,
+    data: {}
+  };
+  handleSubmit = (data) => {
+    this.setState((prevState) => ({ ...prevState, filled: true, data: data }));
+  };
+
+  render() {
+    return (
+      <div className={styles.main}>
+        {!this.state.filled && <Header text='Creating of anketa' />}
+        {!this.state.filled && <Info onSubmit={this.handleSubmit} />}
+        {this.state.filled && <FilledProfile data={this.state.data} />}
+      </div>
+    );
+  }
 }
-
 export default App;
