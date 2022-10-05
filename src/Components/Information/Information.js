@@ -10,7 +10,6 @@ export default function Info({ onSubmit }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     if (checkEntries(data)) {
       onSubmit(data);
     }
@@ -151,7 +150,6 @@ export default function Info({ onSubmit }) {
           onChange={handleChange}
         />
       ))}
-
       <Textarea
         name='about'
         text='About you'
@@ -161,7 +159,6 @@ export default function Info({ onSubmit }) {
         value={data.about}
         onChange={handleChange}
       />
-
       <Textarea
         name='project'
         text='About your last project'
@@ -171,7 +168,6 @@ export default function Info({ onSubmit }) {
         value={data.project}
         onChange={handleChange}
       />
-
       <div className='form__button'>
         <Button type='submit' text='Save' />
         <Button type='reset' text='Cancel' />

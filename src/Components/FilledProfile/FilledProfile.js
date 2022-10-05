@@ -20,17 +20,14 @@ export default function FilledProfile (...props){
           <h2>The link of your site is: </h2>
           <p className={styles.text}> {site}</p>
         </div>
-
         <div className={styles.info_block}>
           <h2>About you: </h2>
           <p rows = {7} className={styles.text}> {about}</p>
         </div>
-
         <div className={styles.info_block}>
           <h2>Your technologies stack is: </h2>
           <p rows = {7} className={styles.text}> {stack}</p>
         </div>
-
         <div className={styles.info_block}>
           <h2>The description of your last project: </h2>
           <p rows = {7} className={styles.text}> {project}</p>
