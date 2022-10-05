@@ -1,14 +1,10 @@
 import React from 'react';
 import styles from './Header.module.css';
 
-class Header extends React.Component {
-  render() {
+export default function Header (...props) {
     return (
-      <div>
+      <React.Fragment>
         <h1>{this.props.text}</h1>
-      </div>
+      </React.Fragment>
     );
   }
-}
-
-export default Header;
